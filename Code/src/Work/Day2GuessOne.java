@@ -8,6 +8,7 @@ public class Day2GuessOne {
         System.out.print("请输入你猜测的数字：");
         Scanner sc = new Scanner(System.in);
         int guess = sc.nextInt();
+        sc.close();
         if (secret < guess) {
             System.out.println("大了");
         }   else if (secret > guess) {
