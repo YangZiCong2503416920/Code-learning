@@ -10,7 +10,5 @@ public class Day1TempConvert {
         double F;
         F = userTemp * 9/5 + 32;
         System.out.println("您输入的温度转化为华氏度为：" + F + "F");
-
-
     }
 }
