@@ -4,24 +4,22 @@ import java.util.Scanner;
 
 public class Day3GuessLoop {
     static void main(String[] args) {
-        int time = 0;
-        int secret = new java.util.Scanner(System.in).nextInt();
+        int secret = new java.util.Random().nextInt(100) + 1;   // 1~100
         Scanner sc = new Scanner(System.in);
-        System.out.println("请输入你猜测的数字：");
-        int guess = sc.nextInt();
-        while (true) {
-            secret = sc.nextInt();
-            ++time;
-            if (secret > guess) {
+        int count = 0;//计数器
+        while (true) {//无限循环
+            System.out.print("请输入你猜测的数字：");
+            int guess = sc.nextInt();
+            count++;//每猜一次记录+1
+            if (guess < secret) {
                 System.out.println("小了");
-            } else if (secret < guess) {
+            }   else if (guess > secret) {
                 System.out.println("大了");
-            } else if (secret == guess) {
-                System.out.println("答对了！");
-                sc.close();
+            }   else {
+                System.out.println("回答正确！你一共猜了" + count + "轮");
                 break;
             }
         }
-        System.out.println("你一共猜了" +  time + "轮");
+        sc.close();
     }
 }
