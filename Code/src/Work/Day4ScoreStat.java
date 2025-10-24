@@ -17,6 +17,7 @@ public class Day4ScoreStat {
         System.out.printf("平均分：%.1f%n",avg(scores));
         System.out.printf("最高分：%.1f%n",max(scores));
         System.out.printf("最低分：%.1f%n",min(scores));
+        sc.close();
     }
     public static double avg(double[] arr) {
         double sum = 0;
