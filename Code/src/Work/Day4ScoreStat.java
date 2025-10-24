@@ -3,8 +3,9 @@ package Work;
 import java.util.Scanner;
 
 public class Day4ScoreStat {
+    private static final int COUNT = 5;
     static void main(String[] args) {
-        double[] scores = new double[5];
+        double[] scores = new double[COUNT];
         Scanner sc = new Scanner(System.in);
 
         //循环录入5名学生的成绩
