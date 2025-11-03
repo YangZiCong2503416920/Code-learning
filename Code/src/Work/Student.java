@@ -23,4 +23,11 @@ public class Student {
     public double getScore() {
         return score;
     }
+
+    public void setScore(double score) { this.score = score; }
+    public String getName() {
+        return name;
+    }
+
+
 }
